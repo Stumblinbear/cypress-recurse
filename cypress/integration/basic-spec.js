@@ -18,7 +18,6 @@ describe('recurse', () => {
     recurse(
       () => cy.task('randomNumber'),
       // https://github.com/bahmutov/cypress-recurse/issues/76
-      // @ts-ignore
       (n) => n === 7,
       {
         limit: 50, // max number of iterations

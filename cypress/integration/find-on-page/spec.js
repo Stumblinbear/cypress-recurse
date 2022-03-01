@@ -13,8 +13,6 @@ describe('find on page example', () => {
 
     recurse(
       () => cy.get('#output').invoke('text'),
-      // https://github.com/bahmutov/cypress-recurse/issues/76
-      // @ts-ignore
       (text) => text === 'Surprise!',
       {
         delay: 500,
