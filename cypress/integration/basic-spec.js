@@ -17,7 +17,6 @@ describe('recurse', () => {
   it('gets 7 after 50 iterations or 30 seconds', { retries: 2 }, () => {
     recurse(
       () => cy.task('randomNumber'),
-      // https://github.com/bahmutov/cypress-recurse/issues/76
       (n) => n === 7,
       {
         limit: 50, // max number of iterations
